@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsha Sathish - AI Enthusiast & Salesforce Developer</title>
+    <title>Harsha Sathish - AI Engineer & Machine Learning Specialist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -20,7 +20,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -45,7 +44,6 @@
             padding: 0 2rem;
         }
 
-        /* Header */
         header {
             padding: 2rem 0;
             position: relative;
@@ -92,7 +90,6 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section */
         .hero {
             padding: 6rem 0;
             text-align: center;
@@ -123,6 +120,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            background-size: 200% 200%;
             animation: shimmer 3s ease-in-out infinite;
         }
 
@@ -167,6 +165,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -192,11 +191,77 @@
             box-shadow: 0 8px 25px rgba(71, 85, 105, 0.4);
         }
 
-        /* Skills Section */
-        .skills {
-            padding: 6rem 0;
+        .certifications {
+            padding: 4rem 0;
             background: rgba(15, 23, 42, 0.5);
             backdrop-filter: blur(10px);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #60a5fa;
+        }
+
+        .cert-badge {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cert-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #f1f5f9;
+        }
+
+        .cert-issuer {
+            color: #60a5fa;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cert-date {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            color: #34d399;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-link:hover {
+            color: #10b981;
+            transform: translateX(5px);
+        }
+
+        .skills {
+            padding: 6rem 0;
         }
 
         .section-title {
@@ -252,14 +317,15 @@
             font-size: 0.9rem;
         }
 
-        /* Experience Section */
         .experience {
             padding: 6rem 0;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
         }
 
         .timeline {
             position: relative;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -329,11 +395,41 @@
             margin-bottom: 1rem;
         }
 
-        /* Projects Section */
+        .timeline-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+
+        .timeline-content li {
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content li {
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content li {
+            padding-right: 1.5rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #34d399;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content li:before {
+            content: '◂';
+            position: absolute;
+            right: 0;
+            color: #34d399;
+        }
+
         .projects {
             padding: 6rem 0;
-            background: rgba(15, 23, 42, 0.5);
-            backdrop-filter: blur(10px);
         }
 
         .projects-grid {
@@ -391,9 +487,88 @@
             border: 1px solid rgba(96, 165, 250, 0.2);
         }
 
-        /* Contact Section */
+        .publications {
+            padding: 6rem 0;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .pub-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pub-item {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .pub-item:hover {
+            transform: translateX(10px);
+            border-color: #60a5fa;
+        }
+
+        .pub-item h3 {
+            color: #f1f5f9;
+            margin-bottom: 1rem;
+        }
+
+        .pub-item p {
+            color: #cbd5e1;
+        }
+
+        .awards {
+            padding: 6rem 0;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .award-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: #fbbf24;
+        }
+
+        .award-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fbbf24;
+        }
+
+        .award-card h3 {
+            color: #f1f5f9;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .award-card p {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
         .contact {
             padding: 6rem 0;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
             text-align: center;
         }
 
@@ -457,7 +632,6 @@
             background: rgba(96, 165, 250, 0.1);
         }
 
-        /* Footer */
         footer {
             background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(10px);
@@ -466,7 +640,6 @@
             border-top: 1px solid rgba(148, 163, 184, 0.1);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -499,6 +672,18 @@
                 left: 2rem;
             }
 
+            .timeline-item:nth-child(odd) .timeline-content li,
+            .timeline-item:nth-child(even) .timeline-content li {
+                padding-left: 1.5rem;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content li:before {
+                content: '▸';
+                left: 0;
+                right: auto;
+            }
+
             .contact-info {
                 flex-direction: column;
                 align-items: center;
@@ -508,12 +693,11 @@
                 gap: 1rem;
             }
 
-            .projects-grid {
+            .projects-grid, .cert-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Floating Elements */
         .floating-elements {
             position: fixed;
             top: 0;
@@ -538,10 +722,8 @@
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
     <div class="bg-animation"></div>
 
-    <!-- Floating Elements -->
     <div class="floating-elements">
         <div class="floating-element" style="left: 10%; width: 60px; height: 60px; animation-delay: 0s;"></div>
         <div class="floating-element" style="left: 20%; width: 40px; height: 40px; animation-delay: -5s;"></div>
@@ -554,13 +736,13 @@
         <div class="floating-element" style="left: 90%; width: 75px; height: 75px; animation-delay: -40s;"></div>
     </div>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo">Harsha Sathish</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -570,16 +752,16 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>Harsha Sathish</h1>
-                <p class="subtitle">AI Enthusiast & Salesforce Developer</p>
+                <p class="subtitle">AI Engineer | Machine Learning Specialist</p>
                 <p class="description">
-                    Passionate about artificial intelligence and enterprise solutions, with expertise in Salesforce development 
-                    and machine learning. Currently pursuing M.Sc. in AI in Germany while building innovative solutions 
-                    that bridge the gap between cutting-edge technology and real-world business needs.
+                    AI Engineer specializing in machine learning, computer vision, and enterprise solutions. 
+                    Currently pursuing M.Sc. in AI at THWS Germany while working as a RAG Developer for the 
+                    Bearings/Mechatronics Team. IBM Certified in RAG and Agentic AI systems with proven 
+                    expertise in Salesforce development and deep learning applications.
                 </p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -595,7 +777,29 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-badge"><i class="fas fa-certificate"></i></div>
+                    <h3>IBM RAG and Agentic AI: Build Next-Gen AI Systems</h3>
+                    <p class="cert-issuer">IBM & Coursera</p>
+                    <p class="cert-date">November 2025</p>
+                    <a href="https://coursera.org/share/2fefeda45b8dbcacb32633417a36e756" target="_blank" class="cert-link">
+                        Verify Certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge"><i class="fab fa-salesforce"></i></div>
+                    <h3>Salesforce Certified AI Associate</h3>
+                    <p class="cert-issuer">Salesforce</p>
+                    <p class="cert-date">2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
@@ -630,11 +834,20 @@
                     <h3>Deep Learning</h3>
                     <p class="skill-level">Intermediate</p>
                 </div>
+                <div class="skill-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Computer Vision</h3>
+                    <p class="skill-level">Intermediate</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>RAG & LLMs</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
@@ -642,10 +855,27 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
+                        <h3>HiWi / Research Assistant</h3>
+                        <p class="company">Technische Hochschule Würzburg-Schweinfurt, Germany</p>
+                        <p class="duration">November 2025 - Present</p>
+                        <ul>
+                            <li>Working as a RAG Developer for the Bearings/Mechatronics Team</li>
+                            <li>Building LLMs custom trained on documents/slides with RAG functionality</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
                         <h3>Senior Associate Consultant</h3>
                         <p class="company">Infosys, Trivandrum, India</p>
                         <p class="duration">June 2024 - February 2025</p>
-                        <p>Supported Salesforce development across various business units of GE Vernova. Led team optimization initiatives and obtained Salesforce AI Associate Certification.</p>
+                        <ul>
+                            <li>Developed critical Salesforce requirements for GE Vernova Business Units</li>
+                            <li>Worked with Apex, Aura Components, LWC, Flows, SOQL/SOSL</li>
+                            <li>Obtained Salesforce Certified AI Associate Certification</li>
+                            <li>Led team optimization of Salesforce Architecture</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -654,7 +884,11 @@
                         <h3>Software Engineering Specialist & DT Intern</h3>
                         <p class="company">GE Vernova, Bangalore, India</p>
                         <p class="duration">January 2023 - May 2024</p>
-                        <p>Led critical data migration project resulting in $250,000 annual cost savings. Customized CI/CD tools and developed complex Salesforce requirements.</p>
+                        <ul>
+                            <li>Led critical data migration project with $250,000 annual cost savings</li>
+                            <li>Built and customized Salesforce solutions using Apex, LWC, Flows</li>
+                            <li>Customized Flosum CI/CD tool for streamlined deployment</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -663,22 +897,63 @@
                         <h3>Research Intern</h3>
                         <p class="company">Litmus7, Ernakulam (Remote), India</p>
                         <p class="duration">July 2022 - November 2022</p>
-                        <p>Developed Streamlit applications for data preprocessing and classification modeling using Python, TensorFlow, and ML libraries.</p>
+                        <ul>
+                            <li>Developed Streamlit application for data preprocessing</li>
+                            <li>Built classification models using Python, TensorFlow, ML libraries</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
+                <div class="project-card" style="border: 2px solid #34d399;">
+                    <div class="project-content">
+                        <h3>RAG System for Mechatronics Department <span style="background: linear-gradient(135deg, #34d399, #10b981); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.75rem; margin-left: 0.5rem;">Ongoing</span></h3>
+                        <p>Developing a sophisticated Retrieval-Augmented Generation (RAG) system for the Bearings/Mechatronics Team at THWS. Building custom-trained LLMs on technical documents, slides, and engineering resources to enable intelligent information retrieval and question-answering for mechanical engineering applications, enhancing research efficiency and knowledge accessibility.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">Document Processing</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" style="border: 2px solid #34d399;">
+                    <div class="project-content">
+                        <h3>H. Pylori Bacteria Detection on WSI Images <span style="background: linear-gradient(135deg, #34d399, #10b981); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.75rem; margin-left: 0.5rem;">Ongoing</span></h3>
+                        <p>Developing an advanced deep learning system for automated detection and classification of Helicobacter pylori bacteria in Whole Slide Images (WSI) for LABOKLIN, Bad Kissingen, Germany. Implementing state-of-the-art computer vision techniques for medical image analysis to assist veterinary pathology diagnostics.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Medical Imaging</span>
+                            <span class="tech-tag">WSI Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" style="border: 2px solid #34d399;">
+                    <div class="project-content">
+                        <h3>MAI Student Integration Assistant <span style="background: linear-gradient(135deg, #34d399, #10b981); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.75rem; margin-left: 0.5rem;">Ongoing</span></h3>
+                        <p>Building an intelligent RAG-powered chatbot to support incoming Master's students in Artificial Intelligence at THWS. The system provides personalized guidance on course structure, German integration, housing, visa procedures, and daily life in Würzburg-Schweinfurt, helping international students navigate their academic journey and settle smoothly in Germany.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Chatbot</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Sign Language Recognition System</h3>
-                        <p>Developed a deep learning model using ResNet18 achieving 87.49% accuracy for ASL alphabet recognition. Implemented advanced preprocessing and data augmentation techniques.</p>
+                        <p>Built deep learning model with ResNet18 achieving 87.49% accuracy on ASL alphabet recognition. Implemented advanced preprocessing (CLAHE, morphological operations) and data augmentation with transfer learning and test-time augmentation for 22-class classification.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">ResNet18</span>
@@ -689,8 +964,8 @@
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Multi-Object Tracking with Particle Filter</h3>
-                        <p>Built a sophisticated tracking system using particle filtering for projectile trajectory estimation with Hungarian algorithm for data association and DBSCAN clustering.</p>
+                        <h3>Multi-Object Trajectory Tracking</h3>
+                        <p>Developed real-time tracking system using particle filters and Hungarian algorithm for data association. Implemented DBSCAN clustering and systematic resampling for 2000+ particle management, achieving robust performance handling sensor noise and dropouts.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Particle Filter</span>
@@ -701,8 +976,8 @@
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>BlackJack RL Optimization</h3>
-                        <p>Implemented Q-Learning and Double Q-Learning agents for Blackjack strategy optimization, achieving 43.5% win rate with advanced reinforcement learning techniques.</p>
+                        <h3>BlackJack Strategy Optimization</h3>
+                        <p>Implemented Q-Learning and Double Q-Learning agents achieving 43.5% win rate (vs 27% baseline). Trained models over 500,000 episodes with epsilon-greedy exploration strategies for optimal Blackjack gameplay.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Q-Learning</span>
@@ -711,29 +986,64 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Time Series Classification</h3>
-                        <p>Developed MLP and CNN architectures for time series classification with advanced training techniques including early stopping and learning rate scheduling.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">CNN</span>
-                            <span class="tech-tag">MLP</span>
-                            <span class="tech-tag">Time Series</span>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="pub-list">
+                <div class="pub-item">
+                    <h3>A Comparative Study on the Working of GNN and CNN on Panoramic X-Rays in Prediction of Dental Diseases</h3>
+                    <p>Analyzed Deep Learning architectures for dental image analysis, comparing Graph Neural Networks and Convolutional Neural Networks for medical diagnosis applications.</p>
+                </div>
+                <div class="pub-item">
+                    <h3>A Strategy for Detecting Malicious Spam Emails using various Classifiers</h3>
+                    <p>Developed a comprehensive strategy for spam email detection using multiple classification algorithms, implementing comparative analysis of various machine learning approaches.</p>
+                </div>
+                <div class="pub-item">
+                    <h3>Aiding the Visually Impaired using Artificial Intelligence and Speech Recognition Technology</h3>
+                    <p>Research on accessibility technologies using computer vision and speech technology to assist visually impaired individuals in daily activities.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <h2 class="section-title">Honors & Awards</h2>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Technology Excellence CIO Awards</h3>
+                    <p>Twice Nominated for outstanding technical contributions at GE Vernova</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-star"></i></div>
+                    <h3>Deliver with Focus Award</h3>
+                    <p>Recognized for high impact performance and project delivery excellence</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-award"></i></div>
+                    <h3>Applause Award</h3>
+                    <p>Multiple recognitions for exceptional work quality and team collaboration</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-business-time"></i></div>
+                    <h3>Restaurant Co-founder</h3>
+                    <p>Co-founded a restaurant and managed two cafeterias, implementing POS and online ordering systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
             <p style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem;">
-                Currently pursuing M.Sc. in Artificial Intelligence in Germany. Open to opportunities in AI research, 
-                Salesforce development, and innovative tech solutions.
+                Currently pursuing M.Sc. in Artificial Intelligence at THWS Germany while working as a RAG Developer. 
+                IBM Certified in RAG and Agentic AI. Open to opportunities in AI research, ML engineering, and innovative tech solutions.
             </p>
             
             <div class="contact-info">
@@ -752,17 +1062,25 @@
             </div>
 
             <div class="social-links">
-                <a href="https://linkedin.com/in/harshasathish" class="social-link" target="_blank">
+                <a href="https://linkedin.com/in/harshasathish" class="social-link" target="_blank" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/hxrshx" class="social-link" target="_blank">
+                <a href="https://github.com/hxrshx" class="social-link" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
+                <a href="https://harsha-sathish.com" class="social-link" target="_blank" title="Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <p style="color: #94a3b8; font-size: 0.9rem;">
+                    <strong>Languages:</strong> English (C1) • German (A2) • Tamil (Native) • Malayalam (Native) • Hindi (Intermediate)
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Harsha Sathish. All rights reserved.</p>
@@ -770,7 +1088,6 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -784,7 +1101,6 @@
             });
         });
 
-        // Add scroll effect to navigation
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
@@ -794,7 +1110,6 @@
             }
         });
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -809,15 +1124,13 @@
             });
         }, observerOptions);
 
-        // Observe elements for animation
-        document.querySelectorAll('.skill-card, .timeline-item, .project-card').forEach(el => {
+        document.querySelectorAll('.skill-card, .timeline-item, .project-card, .cert-card, .award-card, .pub-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
 
-        // Dynamic floating elements
         function createFloatingElement() {
             const element = document.createElement('div');
             element.className = 'floating-element';
@@ -834,10 +1147,8 @@
             }, 25000);
         }
 
-        // Create floating elements periodically
         setInterval(createFloatingElement, 3000);
 
-        // Parallax effect for hero section
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
@@ -848,31 +1159,6 @@
             }
         });
 
-        // Typewriter effect for hero title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typewriter effect when page loads
-        window.addEventListener('load', () => {
-            const heroTitle = document.querySelector('.hero h1');
-            if (heroTitle) {
-                const originalText = heroTitle.textContent;
-                typeWriter(heroTitle, originalText, 150);
-            }
-        });
-
-        // Mobile menu toggle (for future enhancement)
         const mobileMenuToggle = document.createElement('button');
         mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
         mobileMenuToggle.style.cssText = `
@@ -884,10 +1170,8 @@
             cursor: pointer;
         `;
         
-        // Add mobile menu to nav (will be visible on mobile)
         document.querySelector('nav').appendChild(mobileMenuToggle);
         
-        // Add mobile styles
         const mobileStyles = document.createElement('style');
         mobileStyles.textContent = `
             @media (max-width: 768px) {
@@ -920,12 +1204,10 @@
         `;
         document.head.appendChild(mobileStyles);
 
-        // Mobile menu functionality
         mobileMenuToggle.addEventListener('click', () => {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
             
-            // Toggle icon
             const icon = mobileMenuToggle.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -936,7 +1218,6 @@
             }
         });
 
-        // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 const navLinks = document.querySelector('.nav-links');
@@ -947,136 +1228,6 @@
                 icon.classList.add('fa-bars');
             });
         });
-
-        // Enhanced scroll animations
-        const animateOnScroll = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const delay = entry.target.dataset.delay || 0;
-                    setTimeout(() => {
-                        entry.target.classList.add('animate-in');
-                    }, delay);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        // Add animation classes to elements
-        document.querySelectorAll('.skill-card').forEach((card, index) => {
-            card.dataset.delay = index * 100;
-            card.classList.add('animate-on-scroll');
-            animateOnScroll.observe(card);
-        });
-
-        document.querySelectorAll('.project-card').forEach((card, index) => {
-            card.dataset.delay = index * 150;
-            card.classList.add('animate-on-scroll');
-            animateOnScroll.observe(card);
-        });
-
-        // Add CSS for animations
-        const animationStyles = document.createElement('style');
-        animationStyles.textContent = `
-            .animate-on-scroll {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
-            
-            .animate-in {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-            .skill-card.animate-in {
-                transform: translateY(0) scale(1);
-            }
-            
-            .project-card.animate-in {
-                transform: translateY(0) rotateX(0);
-            }
-        `;
-        document.head.appendChild(animationStyles);
-
-        // Add cursor trail effect
-        let mouseTrail = [];
-        const trailLength = 20;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseTrail.push({ x: e.clientX, y: e.clientY, time: Date.now() });
-            
-            if (mouseTrail.length > trailLength) {
-                mouseTrail.shift();
-            }
-            
-            updateTrail();
-        });
-
-        function updateTrail() {
-            const existingTrails = document.querySelectorAll('.mouse-trail');
-            existingTrails.forEach(trail => trail.remove());
-            
-            mouseTrail.forEach((point, index) => {
-                const trail = document.createElement('div');
-                trail.className = 'mouse-trail';
-                trail.style.cssText = `
-                    position: fixed;
-                    left: ${point.x}px;
-                    top: ${point.y}px;
-                    width: ${20 - index}px;
-                    height: ${20 - index}px;
-                    background: radial-gradient(circle, rgba(96, 165, 250, ${0.5 - index * 0.025}), transparent);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    z-index: 9999;
-                    transform: translate(-50%, -50%);
-                    transition: opacity 0.5s ease;
-                `;
-                
-                document.body.appendChild(trail);
-                
-                setTimeout(() => {
-                    if (trail.parentNode) {
-                        trail.style.opacity = '0';
-                        setTimeout(() => trail.remove(), 500);
-                    }
-                }, 50);
-            });
-        }
-
-        // Performance optimization - throttle scroll events
-        let ticking = false;
-        
-        function updateScrollEffects() {
-            const scrolled = window.pageYOffset;
-            const nav = document.querySelector('nav');
-            const hero = document.querySelector('.hero');
-            
-            // Update navigation background
-            if (scrolled > 100) {
-                nav.style.background = 'rgba(15, 23, 42, 0.95)';
-                nav.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
-            } else {
-                nav.style.background = 'rgba(15, 23, 42, 0.8)';
-                nav.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
-            }
-            
-            // Parallax effect
-            if (hero) {
-                const rate = scrolled * -0.3;
-                hero.style.transform = `translateY(${rate}px)`;
-            }
-            
-            ticking = false;
-        }
-        
-        function requestScrollUpdate() {
-            if (!ticking) {
-                requestAnimationFrame(updateScrollEffects);
-                ticking = true;
-            }
-        }
-        
-        window.addEventListener('scroll', requestScrollUpdate);
     </script>
 </body>
 </html>
