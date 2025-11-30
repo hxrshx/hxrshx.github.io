@@ -389,13 +389,32 @@
             justify-content: flex-end;
         }
 
-        .company-logo {
+        .company-icon {
             width: 50px;
             height: 50px;
             border-radius: 10px;
-            object-fit: contain;
-            background: white;
-            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .company-icon.thws {
+            background: linear-gradient(135deg, #0066cc, #004c99);
+        }
+
+        .company-icon.infosys {
+            background: linear-gradient(135deg, #007cc3, #005a8c);
+        }
+
+        .company-icon.ge {
+            background: linear-gradient(135deg, #0066cc, #004499);
+        }
+
+        .company-icon.litmus7 {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
         }
 
         .timeline-content h3 {
@@ -908,7 +927,9 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <img src="https://www.thws.de/typo3conf/ext/in2template/Resources/Public/Frontend/img/logo.svg" alt="THWS Logo" class="company-logo">
+                            <div class="company-icon thws">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
                             <h3>HiWi / Research Assistant</h3>
                         </div>
                         <p class="company">Technische Hochschule Würzburg-Schweinfurt, Germany</p>
@@ -923,7 +944,9 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys Logo" class="company-logo">
+                            <div class="company-icon infosys">
+                                <i class="fas fa-code"></i>
+                            </div>
                             <h3>Senior Associate Consultant</h3>
                         </div>
                         <p class="company">Infosys, Trivandrum, India</p>
@@ -940,7 +963,9 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/GE_Vernova_logo.svg" alt="GE Vernova Logo" class="company-logo">
+                            <div class="company-icon ge">
+                                <i class="fas fa-bolt"></i>
+                            </div>
                             <h3>Software Engineering Specialist & DT Intern</h3>
                         </div>
                         <p class="company">GE Vernova, Bangalore, India</p>
@@ -956,7 +981,9 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGpKMjzSDPHHw/company-logo_200_200/company-logo_200_200/0/1630504687806/litmus7_logo?e=2147483647&v=beta&t=hn_aUhMgQXY0kOiDJMi4xNGgbHPmr6qH0wQk5LN0L2Q" alt="Litmus7 Logo" class="company-logo">
+                            <div class="company-icon litmus7">
+                                <i class="fas fa-flask"></i>
+                            </div>
                             <h3>Research Intern</h3>
                         </div>
                         <p class="company">Litmus7, Ernakulam (Remote), India</p>
