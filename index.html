@@ -377,50 +377,10 @@
             box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
         }
 
-        .company-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-item:nth-child(odd) .company-header {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-
-        .company-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .company-icon.thws {
-            background: linear-gradient(135deg, #0066cc, #004c99);
-        }
-
-        .company-icon.infosys {
-            background: linear-gradient(135deg, #007cc3, #005a8c);
-        }
-
-        .company-icon.ge {
-            background: linear-gradient(135deg, #0066cc, #004499);
-        }
-
-        .company-icon.litmus7 {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-        }
-
         .timeline-content h3 {
             color: #f1f5f9;
             font-size: 1.3rem;
-            margin: 0;
+            margin-bottom: 0.5rem;
         }
 
         .timeline-content .company {
@@ -466,6 +426,41 @@
             position: absolute;
             right: 0;
             color: #34d399;
+        }
+
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item:nth-child(odd) .company-header {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        .company-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(52, 211, 153, 0.2));
+            border: 2px solid rgba(96, 165, 250, 0.3);
+            font-size: 1.5rem;
+            color: #60a5fa;
+            transition: all 0.3s ease;
+        }
+
+        .company-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(96, 165, 250, 0.4);
+        }
+
+        .timeline-content h3 {
+            margin: 0;
         }
 
         .projects {
@@ -527,20 +522,6 @@
             border: 1px solid rgba(96, 165, 250, 0.2);
         }
 
-        .project-link {
-            display: inline-block;
-            color: #34d399;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            margin-top: 0.5rem;
-        }
-
-        .project-link:hover {
-            color: #10b981;
-            transform: translateX(5px);
-        }
-
         .publications {
             padding: 6rem 0;
             background: rgba(15, 23, 42, 0.5);
@@ -574,20 +555,6 @@
 
         .pub-item p {
             color: #cbd5e1;
-            margin-bottom: 1rem;
-        }
-
-        .pub-link {
-            display: inline-block;
-            color: #34d399;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .pub-link:hover {
-            color: #10b981;
-            transform: translateX(5px);
         }
 
         .awards {
@@ -927,9 +894,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <div class="company-icon thws">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
+                            <div class="company-icon"><i class="fas fa-graduation-cap"></i></div>
                             <h3>HiWi / Research Assistant</h3>
                         </div>
                         <p class="company">Technische Hochschule Würzburg-Schweinfurt, Germany</p>
@@ -944,9 +909,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <div class="company-icon infosys">
-                                <i class="fas fa-code"></i>
-                            </div>
+                            <div class="company-icon"><i class="fas fa-building"></i></div>
                             <h3>Senior Associate Consultant</h3>
                         </div>
                         <p class="company">Infosys, Trivandrum, India</p>
@@ -963,9 +926,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <div class="company-icon ge">
-                                <i class="fas fa-bolt"></i>
-                            </div>
+                            <div class="company-icon"><i class="fas fa-industry"></i></div>
                             <h3>Software Engineering Specialist & DT Intern</h3>
                         </div>
                         <p class="company">GE Vernova, Bangalore, India</p>
@@ -981,9 +942,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="company-header">
-                            <div class="company-icon litmus7">
-                                <i class="fas fa-flask"></i>
-                            </div>
+                            <div class="company-icon"><i class="fas fa-flask"></i></div>
                             <h3>Research Intern</h3>
                         </div>
                         <p class="company">Litmus7, Ernakulam (Remote), India</p>
@@ -1051,9 +1010,6 @@
                             <span class="tech-tag">Computer Vision</span>
                             <span class="tech-tag">TensorFlow</span>
                         </div>
-                        <a href="https://github.com/hxrshx" target="_blank" class="project-link">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -1066,9 +1022,6 @@
                             <span class="tech-tag">DBSCAN</span>
                             <span class="tech-tag">Computer Vision</span>
                         </div>
-                        <a href="https://github.com/hxrshx" target="_blank" class="project-link">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -1081,9 +1034,6 @@
                             <span class="tech-tag">Reinforcement Learning</span>
                             <span class="tech-tag">Game Theory</span>
                         </div>
-                        <a href="https://github.com/hxrshx" target="_blank" class="project-link">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -1097,23 +1047,14 @@
                 <div class="pub-item">
                     <h3>A Comparative Study on the Working of GNN and CNN on Panoramic X-Rays in Prediction of Dental Diseases</h3>
                     <p>Analyzed Deep Learning architectures for dental image analysis, comparing Graph Neural Networks and Convolutional Neural Networks for medical diagnosis applications.</p>
-                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="pub-link">
-                        View Publication <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </div>
                 <div class="pub-item">
                     <h3>A Strategy for Detecting Malicious Spam Emails using various Classifiers</h3>
                     <p>Developed a comprehensive strategy for spam email detection using multiple classification algorithms, implementing comparative analysis of various machine learning approaches.</p>
-                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="pub-link">
-                        View Publication <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </div>
                 <div class="pub-item">
                     <h3>Aiding the Visually Impaired using Artificial Intelligence and Speech Recognition Technology</h3>
                     <p>Research on accessibility technologies using computer vision and speech technology to assist visually impaired individuals in daily activities.</p>
-                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="pub-link">
-                        View Publication <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -1158,7 +1099,7 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>harshasathish2001@gmail.com</span>
+                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e464f5c5d464f5d4f5a46475d461c1e1e1f6e49434f4742004d4143">[email&#160;protected]</a></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -1196,8 +1137,7 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1211,7 +1151,6 @@
             });
         });
 
-        // Navigation background on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
@@ -1221,7 +1160,6 @@
             }
         });
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1243,7 +1181,6 @@
             observer.observe(el);
         });
 
-        // Floating elements
         function createFloatingElement() {
             const element = document.createElement('div');
             element.className = 'floating-element';
@@ -1262,7 +1199,6 @@
 
         setInterval(createFloatingElement, 3000);
 
-        // Parallax effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
@@ -1273,53 +1209,6 @@
             }
         });
 
-        // Mouse trail effect
-        let mouseTrail = [];
-        const trailLength = 20;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseTrail.push({ x: e.clientX, y: e.clientY, time: Date.now() });
-            
-            if (mouseTrail.length > trailLength) {
-                mouseTrail.shift();
-            }
-            
-            updateTrail();
-        });
-
-        function updateTrail() {
-            const existingTrails = document.querySelectorAll('.mouse-trail');
-            existingTrails.forEach(trail => trail.remove());
-            
-            mouseTrail.forEach((point, index) => {
-                const trail = document.createElement('div');
-                trail.className = 'mouse-trail';
-                trail.style.cssText = `
-                    position: fixed;
-                    left: ${point.x}px;
-                    top: ${point.y}px;
-                    width: ${20 - index}px;
-                    height: ${20 - index}px;
-                    background: radial-gradient(circle, rgba(96, 165, 250, ${0.5 - index * 0.025}), transparent);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    z-index: 9999;
-                    transform: translate(-50%, -50%);
-                    transition: opacity 0.5s ease;
-                `;
-                
-                document.body.appendChild(trail);
-                
-                setTimeout(() => {
-                    if (trail.parentNode) {
-                        trail.style.opacity = '0';
-                        setTimeout(() => trail.remove(), 500);
-                    }
-                }, 50);
-            });
-        }
-
-        // Mobile menu
         const mobileMenuToggle = document.createElement('button');
         mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
         mobileMenuToggle.style.cssText = `
@@ -1382,13 +1271,4 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 const navLinks = document.querySelector('.nav-links');
-                const icon = mobileMenuToggle.querySelector('i');
-                
-                navLinks.classList.remove('active');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-    </script>
-</body>
-</html>
+                const icon = mobileMenuToggle.querySe
